@@ -36,6 +36,7 @@ const Navbar = () => {
             src="/img/plotter-pro-logo.png" 
             alt="Plotter Pro Logo" 
             className="h-8 md:h-10 w-auto object-contain max-w-[200px]"
+            loading="eager"
           />
         </a>
 
