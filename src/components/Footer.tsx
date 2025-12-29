@@ -2,9 +2,9 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "luc
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border py-8 md:py-12 lg:py-16">
+    <footer className="bg-card border-t border-border py-6 md:py-8 lg:py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-8 md:mb-10 lg:mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 mb-6 md:mb-8 lg:mb-10">
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-3 mb-6">

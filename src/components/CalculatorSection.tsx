@@ -32,43 +32,43 @@ const CalculatorSection = () => {
   const finalPrice = totalPrice * (1 - discount);
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 relative" id="cotizador">
+    <section className="py-8 md:py-12 lg:py-16 relative" id="cotizador">
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-6 md:mb-8 lg:mb-12">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 lg:mb-4">
             Cotizador <span className="text-gradient">Instantáneo</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
             Calcula tu presupuesto en tiempo real. Precios por m² con descuentos automáticos por volumen.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             {/* Calculator Panel */}
-            <div className="p-4 md:p-6 lg:p-8 rounded-2xl glass-card">
-              <h3 className="font-display text-lg font-semibold mb-6 flex items-center gap-2">
+            <div className="p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl glass-card">
+              <h3 className="font-display text-base md:text-lg font-semibold mb-4 md:mb-5 lg:mb-6 flex items-center gap-2">
                 <Printer className="w-5 h-5 text-primary" />
                 Selecciona Material
               </h3>
 
               {/* Material Selection */}
-              <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6 md:mb-8">
+              <div className="grid grid-cols-3 gap-2 mb-4 md:mb-6">
                 {materials.map((mat) => (
                   <button
                     key={mat.id}
                     onClick={() => setSelectedMaterial(mat.id)}
-                    className={`relative p-3 md:p-4 rounded-xl border transition-all duration-200 min-h-[80px] md:min-h-[100px] flex flex-col items-center justify-center ${
+                    className={`relative p-2.5 md:p-3 lg:p-4 rounded-lg md:rounded-xl border transition-all duration-200 min-h-[70px] md:min-h-[85px] lg:min-h-[100px] flex flex-col items-center justify-center ${
                       selectedMaterial === mat.id
                         ? "bg-primary/10 border-primary"
                         : "bg-card border-border hover:border-muted-foreground"
                     }`}
                   >
-                    <div className="text-xl md:text-2xl mb-1 md:mb-2">{mat.icon}</div>
-                    <div className="font-medium text-xs md:text-sm">{mat.name}</div>
-                    <div className="text-[10px] md:text-xs text-muted-foreground">{mat.description}</div>
+                    <div className="text-lg md:text-xl lg:text-2xl mb-1">{mat.icon}</div>
+                    <div className="font-medium text-[10px] md:text-xs lg:text-sm">{mat.name}</div>
+                    <div className="text-[9px] md:text-[10px] lg:text-xs text-muted-foreground">{mat.description}</div>
                     {selectedMaterial === mat.id && (
                       <div className="absolute top-1 right-1 md:top-2 md:right-2 w-4 h-4 md:w-5 md:h-5 rounded-full bg-primary flex items-center justify-center">
                         <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-primary-foreground" />
@@ -79,12 +79,12 @@ const CalculatorSection = () => {
               </div>
 
               {/* Dimensions */}
-              <h3 className="font-display text-lg font-semibold mb-4 flex items-center gap-2">
-                <Layers className="w-5 h-5 text-primary" />
+              <h3 className="font-display text-base md:text-lg font-semibold mb-3 md:mb-4 flex items-center gap-2">
+                <Layers className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 Dimensiones
               </h3>
 
-              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6">
+              <div className="grid grid-cols-2 gap-2 md:gap-3 lg:gap-4 mb-4 md:mb-6">
                 <div>
                   <label className="text-sm text-muted-foreground mb-2 block">Ancho (cm)</label>
                   <div className="relative">
@@ -112,8 +112,8 @@ const CalculatorSection = () => {
               </div>
 
               {/* Quantity */}
-              <div className="mb-6">
-                <label className="text-sm text-muted-foreground mb-2 block">Cantidad</label>
+              <div className="mb-4 md:mb-6">
+                <label className="text-xs md:text-sm text-muted-foreground mb-2 block">Cantidad</label>
                 <input
                   type="range"
                   min="1"
@@ -136,13 +136,13 @@ const CalculatorSection = () => {
             </div>
 
             {/* Price Summary */}
-            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-card border border-border">
-              <h3 className="font-display text-lg font-semibold mb-4 md:mb-6 flex items-center gap-2">
-                <Square className="w-5 h-5 text-primary" />
+            <div className="p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-gradient-card border border-border">
+              <h3 className="font-display text-base md:text-lg font-semibold mb-3 md:mb-4 lg:mb-6 flex items-center gap-2">
+                <Square className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 Resumen de Cotización
               </h3>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-2 md:space-y-3 lg:space-y-4 mb-4 md:mb-6 lg:mb-8">
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="text-muted-foreground">Material</span>
                   <span className="font-medium">{material.name}</span>
@@ -172,21 +172,21 @@ const CalculatorSection = () => {
               </div>
 
               {/* Total Price */}
-              <div className="p-6 rounded-xl bg-muted/50 mb-6">
-                <div className="text-sm text-muted-foreground mb-1">COSTO ESTIMADO</div>
+              <div className="p-4 md:p-5 lg:p-6 rounded-lg md:rounded-xl bg-muted/50 mb-4 md:mb-6">
+                <div className="text-xs md:text-sm text-muted-foreground mb-1">COSTO ESTIMADO</div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-display font-bold text-gradient">
+                  <span className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gradient">
                     ${finalPrice.toFixed(2)}
                   </span>
                 </div>
-                <div className="text-sm text-primary mt-1">
+                <div className="text-xs md:text-sm text-primary mt-1">
                   ${(finalPrice / quantity).toFixed(2)} por unidad ({area.toFixed(2)}m²)
                 </div>
               </div>
 
               {discount > 0 && (
-                <div className="p-4 rounded-xl bg-success/10 border border-success/20 mb-6">
-                  <p className="text-sm text-success">
+                <div className="p-3 md:p-4 rounded-lg md:rounded-xl bg-success/10 border border-success/20 mb-4 md:mb-6">
+                  <p className="text-xs md:text-sm text-success">
                     🎉 ¡Ahorraste ${(totalPrice - finalPrice).toFixed(2)} con descuento por volumen!
                   </p>
                 </div>

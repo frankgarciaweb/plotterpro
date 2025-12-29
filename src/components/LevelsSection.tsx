@@ -65,35 +65,35 @@ const levels = [
 
 const LevelsSection = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-24 relative overflow-hidden" id="niveles">
+    <section className="py-8 md:py-12 lg:py-16 relative overflow-hidden" id="niveles">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warning/10 border border-warning/20 mb-6">
-            <TrendingUp className="w-4 h-4 text-warning" />
-            <span className="text-sm font-medium text-warning">Programa de Fidelidad</span>
+        <div className="text-center mb-6 md:mb-8 lg:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-warning/10 border border-warning/20 mb-3 md:mb-4 lg:mb-6">
+            <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-warning" />
+            <span className="text-xs md:text-sm font-medium text-warning">Programa de Fidelidad</span>
           </div>
 
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 lg:mb-4">
             Gana Mientras <span className="text-gradient">Imprimes</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
             A mayor volumen anual, menores precios unitarios y más beneficios exclusivos. 
             Acumula puntos por cada m² facturado.
           </p>
         </div>
 
         {/* Levels Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
           {levels.map((level, index) => (
             <div
               key={index}
-              className={`relative p-4 md:p-6 rounded-2xl bg-card border ${level.borderColor} ${
+              className={`relative p-3 md:p-4 lg:p-6 rounded-xl md:rounded-2xl bg-card border ${level.borderColor} ${
                 level.featured ? "ring-2 ring-yellow-500/50 md:scale-105 z-10" : ""
-              } transition-all duration-300 hover:-translate-y-2`}
+              } transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2`}
             >
               {level.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-yellow-500 to-amber-600 text-xs font-semibold text-primary-foreground">
@@ -102,24 +102,24 @@ const LevelsSection = () => {
               )}
 
               {/* Header */}
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${level.color} flex items-center justify-center mb-4`}>
-                <level.icon className="w-7 h-7 text-foreground" />
+              <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${level.color} flex items-center justify-center mb-3 md:mb-4`}>
+                <level.icon className="w-6 h-6 md:w-7 md:h-7 text-foreground" />
               </div>
 
-              <h3 className="font-display text-xl font-bold mb-1">{level.name}</h3>
-              <div className="text-sm text-muted-foreground mb-4">{level.volume} / año</div>
+              <h3 className="font-display text-lg md:text-xl font-bold mb-1">{level.name}</h3>
+              <div className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">{level.volume} / año</div>
 
               {/* Discount */}
-              <div className="p-3 rounded-xl bg-muted/50 mb-6">
-                <div className="text-2xl font-display font-bold text-gradient">{level.discount}</div>
-                <div className="text-xs text-muted-foreground">Descuento base</div>
+              <div className="p-2.5 md:p-3 rounded-lg md:rounded-xl bg-muted/50 mb-4 md:mb-5 lg:mb-6">
+                <div className="text-xl md:text-2xl font-display font-bold text-gradient">{level.discount}</div>
+                <div className="text-[10px] md:text-xs text-muted-foreground">Descuento base</div>
               </div>
 
               {/* Benefits */}
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-2 md:space-y-2.5 lg:space-y-3 mb-4 md:mb-5 lg:mb-6">
                 {level.benefits.map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-success shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-1.5 md:gap-2 text-xs md:text-sm">
+                    <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-success shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{benefit}</span>
                   </li>
                 ))}
@@ -137,11 +137,11 @@ const LevelsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-8 md:mt-12 lg:mt-16 p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/20 text-center">
-          <p className="text-base md:text-lg mb-4">
+        <div className="mt-6 md:mt-8 lg:mt-12 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/20 text-center">
+          <p className="text-sm md:text-base lg:text-lg mb-3 md:mb-4">
             <span className="text-primary font-semibold">¡Compra 5 m² más</span> y alcanza el siguiente nivel de descuento!
           </p>
-          <Button variant="hero" size="lg" className="min-h-[48px]">
+          <Button variant="hero" size="lg" className="min-h-[44px] md:min-h-[48px] text-sm md:text-base">
             Calcular mi Volumen Anual
           </Button>
         </div>
