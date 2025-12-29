@@ -174,18 +174,12 @@ const TechSection = () => {
 
             {/* Visual representation */}
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-muted/30 border border-border overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="grid grid-cols-3 gap-2 p-8 w-full max-w-xs">
-                    {["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8", "#F7DC6F", "#BB8FCE"].map((color, i) => (
-                      <div
-                        key={i}
-                        className="aspect-square rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
-                        style={{ backgroundColor: color }}
-                      />
-                    ))}
-                  </div>
-                </div>
+              <div className="rounded-2xl bg-muted/30 border border-border overflow-hidden">
+                <img 
+                  src="/img/proofing.png" 
+                  alt="Soft-Proofing - Gestión de Color Profesional" 
+                  className="w-full h-auto object-contain rounded-2xl"
+                />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-card to-transparent">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">Perfil activo:</span>
