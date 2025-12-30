@@ -34,8 +34,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links & Legal - Grouped for mobile */}
-          <div className="grid grid-cols-2 gap-4 sm:gap-8">
+          {/* Quick Links & Legal - Hidden on mobile */}
+          <div className="hidden md:grid grid-cols-2 gap-4 sm:gap-8">
             {/* Quick Links */}
             <div>
               <h4 className="font-display font-semibold mb-4 md:mb-6">Navegación</h4>
