@@ -4,7 +4,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 const levels = [
   {
@@ -69,6 +71,17 @@ const levels = [
 ];
 
 const LevelsSection = () => {
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    // Scroll to the "Oro" card (index 2) on mount
+    api.scrollTo(2, true);
+  }, [api]);
+
   return (
     <section className="py-8 md:py-12 lg:py-16 relative overflow-hidden" id="niveles">
       {/* Background decoration */}
@@ -92,7 +105,7 @@ const LevelsSection = () => {
         </div>
 
         {/* Levels Grid/Carousel */}
-        <Carousel className="w-full max-w-xs mx-auto md:max-w-none" opts={{ align: "center", startIndex: 2 }}>
+        <Carousel className="w-full max-w-xs mx-auto md:max-w-none" opts={{ align: "center" }} setApi={setApi}>
           <CarouselContent className="-ml-4 py-12">
             {levels.map((level, index) => (
               <CarouselItem key={index} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/4">
