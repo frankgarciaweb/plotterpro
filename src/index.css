@@ -131,6 +131,10 @@
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
   }
+
+  .animate-scale-loop {
+    animation: scale-loop 6s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -193,6 +197,33 @@
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes scale-loop {
+  0% {
+    transform: scale(1);
+    border-color: hsl(var(--border));
+    background-color: hsl(var(--card));
+  }
+
+  5% {
+    transform: scale(1.03);
+    border-color: hsl(var(--primary) / 0.5);
+    background-color: hsl(var(--card-elevated));
+    box-shadow: var(--shadow-card);
+  }
+
+  10% {
+    transform: scale(1);
+    border-color: hsl(var(--border));
+    background-color: hsl(var(--card));
+  }
+
+  100% {
+    transform: scale(1);
+    border-color: hsl(var(--border));
+    background-color: hsl(var(--card));
   }
 }
 

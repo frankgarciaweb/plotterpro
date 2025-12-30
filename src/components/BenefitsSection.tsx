@@ -1,4 +1,9 @@
-import { Calculator, ShieldCheck, Award, Clock, FileCheck, Coins } from "lucide-react";
+import { Calculator, ShieldCheck, Award, Clock, FileCheck, Coins, Hand } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const benefits = [
   {
@@ -15,7 +20,7 @@ const benefits = [
   },
   {
     icon: Award,
-    title: "Programa PrintPartner",
+    title: "Programa PlotterPro",
     description: "Acumula puntos por cada m² facturado y canjéalos por descuentos, cashback o beneficios exclusivos.",
     highlight: "Recompensas",
   },
@@ -23,50 +28,61 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-24 relative" id="beneficios">
-      <div className="container mx-auto px-4">
+    <section className="py-8 md:py-12 lg:py-16 relative" id="beneficios">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-6 md:mb-8 lg:mb-12">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 lg:mb-4">
             Digitaliza tu <span className="text-gradient">Negociación</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Olvídate de esperar horas por una cotización manual. Nuestra plataforma 
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
+            Olvídate de esperar horas por una cotización manual. Nuestra plataforma
             valida técnicamente cada archivo en tiempo real.
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="group relative p-8 rounded-2xl glass-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-button group-hover:shadow-glow transition-all duration-300">
-                <benefit.icon className="w-7 h-7 text-primary-foreground" />
-              </div>
+        {/* Benefits Grid/Carousel */}
+        <div className="relative">
+          <Carousel className="w-full max-w-xs mx-auto md:max-w-none" opts={{ align: "start" }}>
+            <CarouselContent className="-ml-4">
+              {benefits.map((benefit, index) => (
+                <CarouselItem key={index} className="pl-4 basis-[85%] md:basis-1/3">
+                  <div
+                    className="group relative p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl glass-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 h-full animate-scale-loop"
+                    style={{ animationDelay: `${index * 2}s` }}
+                  >
+                    {/* Icon */}
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 md:mb-6 shadow-button group-hover:shadow-glow transition-all duration-300">
+                      <benefit.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
+                    </div>
 
-              {/* Content */}
-              <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground mb-4">{benefit.description}</p>
+                    {/* Content */}
+                    <h3 className="font-display text-lg md:text-xl font-semibold mb-2 md:mb-3">{benefit.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4">{benefit.description}</p>
 
-              {/* Highlight Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-sm font-medium text-primary">{benefit.highlight}</span>
-              </div>
+                    {/* Highlight Badge */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      <span className="text-sm font-medium text-primary">{benefit.highlight}</span>
+                    </div>
 
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            </div>
-          ))}
+                    {/* Hover glow effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+
+          {/* Mobile Swipe Indicator */}
+          <div className="flex justify-center mt-4 md:hidden">
+            <Hand className="w-6 h-6 text-muted-foreground animate-swipe-hand" />
+          </div>
         </div>
 
         {/* Problems Section */}
-        <div className="mt-20 p-8 rounded-2xl bg-card border border-border">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="mt-6 md:mt-8 lg:mt-12 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-card border border-border">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 text-center">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-full bg-destructive/10 border border-destructive/20 flex items-center justify-center mx-auto">
                 <Clock className="w-6 h-6 text-destructive" />

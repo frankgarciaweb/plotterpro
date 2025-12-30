@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, Zap, Shield, TrendingUp, Droplets } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
@@ -24,7 +24,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Calidad profesional sin invertir en maquinaria. Cotizaciones instantáneas, 
+            Calidad profesional sin invertir en maquinaria. Cotizaciones instantáneas,
             validación técnica en tiempo real y precios preferenciales por volumen.
           </p>
 
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-display font-bold text-gradient">24/7</div>
-              <div className="text-sm text-muted-foreground">Soporte Técnico</div>
+              <div className="text-sm text-muted-foreground">Consulta tus pedidos</div>
             </div>
           </div>
         </div>
@@ -67,8 +67,8 @@ const HeroSection = () => {
             <span className="text-sm">Programa de Lealtad</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
-            <Zap className="w-5 h-5 text-warning" />
-            <span className="text-sm">Tecnología Látex & UV</span>
+            <Droplets className="w-5 h-5 text-blue-500" />
+            <span className="text-sm">Tinta Original</span>
           </div>
         </div>
       </div>

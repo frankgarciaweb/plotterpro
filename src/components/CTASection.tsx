@@ -16,7 +16,7 @@ const CTASection = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Únete a cientos de revendedores que ya optimizaron su negocio con PrintPartner. 
+            Únete a cientos de revendedores que ya optimizaron su negocio con PlotterPro.
             Regístrate gratis y obtén acceso inmediato a tarifas Nivel 1.
           </p>
 
@@ -38,7 +38,7 @@ const CTASection = () => {
               <div className="w-8 h-8 rounded-full bg-warning/20 flex items-center justify-center">
                 <Clock className="w-4 h-4 text-warning" />
               </div>
-              <span>Soporte 24/7</span>
+              <span>Consulta Pedidos 24/7</span>
             </div>
           </div>
 
@@ -54,7 +54,7 @@ const CTASection = () => {
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
-            Sin compromisos • Registro gratuito • Acceso inmediato
+            Sin compromisos • Acceso inmediato
           </p>
         </div>
       </div>

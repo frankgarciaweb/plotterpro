@@ -42,7 +42,7 @@ const PreflightSection = () => {
             </h2>
 
             <p className="text-muted-foreground mb-8 text-lg">
-              Nuestro sistema actúa como un <strong className="text-foreground">experto en preprensa digital</strong>. 
+              Nuestro sistema actúa como un <strong className="text-foreground">experto en preprensa digital</strong>.
               Detectamos problemas técnicos antes de que imprimas, ahorrándote tiempo y dinero.
             </p>
 
@@ -93,24 +93,23 @@ const PreflightSection = () => {
               {preflightChecks.map((check, index) => (
                 <div
                   key={index}
-                  className={`p-4 rounded-xl border ${
-                    check.status === "success"
+                  className={`p-4 rounded-xl border ${check.status === "success"
                       ? "bg-success/5 border-success/20"
                       : check.status === "warning"
-                      ? "bg-warning/5 border-warning/20"
-                      : "bg-destructive/5 border-destructive/20"
-                  }`}
+                        ? "bg-warning/5 border-warning/20"
+                        : "bg-destructive/5 border-destructive/20"
+                    } animate-scale-loop`}
+                  style={{ animationDelay: `${index * 2.5}s` }}
                 >
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                          check.status === "success"
+                        className={`w-8 h-8 rounded-full flex items-center justify-center ${check.status === "success"
                             ? "bg-success/20"
                             : check.status === "warning"
-                            ? "bg-warning/20"
-                            : "bg-destructive/20"
-                        }`}
+                              ? "bg-warning/20"
+                              : "bg-destructive/20"
+                          }`}
                       >
                         {check.status === "success" ? (
                           <Check className="w-4 h-4 text-success" />
@@ -126,13 +125,12 @@ const PreflightSection = () => {
                       </div>
                     </div>
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        check.status === "success"
+                      className={`px-3 py-1 rounded-full text-xs font-medium ${check.status === "success"
                           ? "bg-success/20 text-success"
                           : check.status === "warning"
-                          ? "bg-warning/20 text-warning"
-                          : "bg-destructive/20 text-destructive"
-                      }`}
+                            ? "bg-warning/20 text-warning"
+                            : "bg-destructive/20 text-destructive"
+                        }`}
                     >
                       {check.label}
                     </span>
