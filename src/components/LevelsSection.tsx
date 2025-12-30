@@ -92,7 +92,7 @@ const LevelsSection = () => {
         </div>
 
         {/* Levels Grid/Carousel */}
-        <Carousel className="w-full max-w-xs mx-auto md:max-w-none" opts={{ align: "start" }}>
+        <Carousel className="w-full max-w-xs mx-auto md:max-w-none" opts={{ align: "center", startIndex: 2 }}>
           <CarouselContent className="-ml-4 py-12">
             {levels.map((level, index) => (
               <CarouselItem key={index} className="pl-4 basis-[85%] md:basis-1/2 lg:basis-1/4">
