@@ -12,48 +12,48 @@ const features = [
 
 const AppShowcase = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 relative overflow-hidden" id="app">
+    <section className="py-24 relative overflow-hidden" id="app">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-5 lg:mb-6">
-              <Smartphone className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-              <span className="text-xs md:text-sm font-medium text-primary">PrintPartner App</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+              <Smartphone className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">PrintPartner App</span>
             </div>
 
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 lg:mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
               Gestiona Todo Desde{" "}
               <span className="text-gradient">Tu Móvil</span>
             </h2>
 
-            <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-4 md:mb-6 lg:mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Como revendedor registrado, tendrás acceso a nuestra aplicación móvil exclusiva. 
               Cotiza, ordena y da seguimiento a tus pedidos desde cualquier lugar.
             </p>
 
             {/* Features List */}
-            <div className="grid sm:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6 lg:mb-8">
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 md:gap-3">
-                  <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-success/20 flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-success" />
+                <div key={index} className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-success" />
                   </div>
-                  <span className="text-xs md:text-sm">{feature}</span>
+                  <span className="text-sm">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-              <Button variant="hero" size="lg" className="min-h-[44px] md:min-h-[48px] text-sm md:text-base">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="lg">
                 Regístrate y Obtén Acceso
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg" className="min-h-[44px] md:min-h-[48px] text-sm md:text-base">
+              <Button variant="outline" size="lg">
                 Ver Demo
               </Button>
             </div>
@@ -62,7 +62,7 @@ const AppShowcase = () => {
           {/* Phone Mockups */}
           <div className="relative flex justify-center">
             {/* Main phone */}
-            <div className="relative z-20 w-48 sm:w-56 md:w-64 lg:w-72">
+            <div className="relative z-20 w-64 md:w-72">
               <div className="rounded-[2.5rem] bg-card border-4 border-muted overflow-hidden shadow-2xl">
                 {/* Phone screen content - Dashboard mockup */}
                 <div className="aspect-[9/19] bg-background p-4">
@@ -145,7 +145,7 @@ const AppShowcase = () => {
             </div>
 
             {/* Background phone */}
-            <div className="absolute top-4 right-0 sm:top-8 sm:-right-8 z-10 w-40 sm:w-48 md:w-56 lg:w-64 opacity-60 hidden sm:block">
+            <div className="absolute top-8 -right-8 z-10 w-56 md:w-64 opacity-60">
               <div className="rounded-[2.5rem] bg-card border-4 border-muted overflow-hidden shadow-xl rotate-6">
                 <div className="aspect-[9/19] bg-background p-4">
                   <div className="text-center pt-12">

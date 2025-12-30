@@ -43,34 +43,34 @@ const colorFeatures = [
 
 const TechSection = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 relative" id="tecnologia">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-6 md:mb-8 lg:mb-12">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 lg:mb-4">
+    <section className="py-24 relative" id="tecnologia">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Tecnología de <span className="text-gradient">Impresión</span>
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Contamos con equipos de última generación para garantizar la máxima calidad en cada trabajo.
           </p>
         </div>
 
         {/* Equipment & Quality Section */}
-        <div className="p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl glass-card border-primary/20 mb-6 md:mb-8 lg:mb-12">
-          <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6 lg:mb-8">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Award className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+        <div className="p-8 rounded-2xl glass-card border-primary/20 mb-12">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Award className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-display text-lg md:text-xl font-semibold">Equipos Premium</h3>
-              <p className="text-xs md:text-sm text-muted-foreground">Tecnología japonesa de clase mundial</p>
+              <h3 className="font-display text-xl font-semibold">Equipos Premium</h3>
+              <p className="text-sm text-muted-foreground">Tecnología japonesa de clase mundial</p>
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {equipmentFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="p-4 md:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-primary" />
@@ -82,8 +82,8 @@ const TechSection = () => {
           </div>
 
           {/* Brand logos visual */}
-          <div className="mt-4 md:mt-6 lg:mt-8 pt-4 md:pt-6 lg:pt-8 border-t border-border">
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8">
+          <div className="mt-8 pt-8 border-t border-border">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               <div className="flex items-center gap-2 px-6 py-3 rounded-xl bg-muted/50">
                 <span className="font-display text-xl font-bold text-foreground">Roland</span>
                 <span className="text-xs text-muted-foreground">DG</span>
@@ -99,20 +99,20 @@ const TechSection = () => {
         </div>
 
         {/* Ecosolvente highlight */}
-        <div className="p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 mb-6 md:mb-8 lg:mb-12">
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center">
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <div className="inline-block px-2.5 py-1 md:px-3 md:py-1 rounded-full bg-primary/10 text-primary text-[10px] md:text-xs font-medium mb-3 md:mb-4">
+              <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
                 Tecnología Ecosolvente
               </div>
-              <h3 className="font-display text-xl md:text-2xl font-bold mb-2 md:mb-3 lg:mb-4">
+              <h3 className="font-display text-2xl font-bold mb-4">
                 La Mejor Relación <span className="text-gradient">Calidad-Precio</span>
               </h3>
-              <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-5 lg:mb-6">
+              <p className="text-muted-foreground mb-6">
                 Nuestras impresiones ecosolventes ofrecen durabilidad excepcional tanto en interiores como exteriores. 
                 Resistentes a UV, agua y rayones, con una vida útil de hasta 5 años en exteriores.
               </p>
-              <ul className="space-y-2 md:space-y-2.5 lg:space-y-3">
+              <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm">
                   <span className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center">
                     <span className="text-success text-xs">✓</span>
@@ -146,18 +146,18 @@ const TechSection = () => {
         </div>
 
         {/* Color Management Section */}
-        <div className="p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-gradient-card border border-border">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+        <div className="p-8 rounded-2xl bg-gradient-card border border-border">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="font-display text-xl md:text-2xl font-bold mb-2 md:mb-3 lg:mb-4">
+              <h3 className="font-display text-2xl font-bold mb-4">
                 Gestión de Color <span className="text-gradient">Profesional</span>
               </h3>
-              <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 lg:mb-8">
+              <p className="text-muted-foreground mb-8">
                 Lo que ves es lo que imprimes. Nuestra plataforma incluye herramientas avanzadas 
                 de gestión de color para garantizar resultados predecibles y consistentes.
               </p>
 
-              <div className="space-y-4 md:space-y-5 lg:space-y-6">
+              <div className="space-y-6">
                 {colorFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
@@ -174,12 +174,18 @@ const TechSection = () => {
 
             {/* Visual representation */}
             <div className="relative">
-              <div className="rounded-2xl bg-muted/30 border border-border overflow-hidden">
-                <img 
-                  src="/img/proofing.png" 
-                  alt="Soft-Proofing - Gestión de Color Profesional" 
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
+              <div className="aspect-square rounded-2xl bg-muted/30 border border-border overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="grid grid-cols-3 gap-2 p-8 w-full max-w-xs">
+                    {["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8", "#F7DC6F", "#BB8FCE"].map((color, i) => (
+                      <div
+                        key={i}
+                        className="aspect-square rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
+                        style={{ backgroundColor: color }}
+                      />
+                    ))}
+                  </div>
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-card to-transparent">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">Perfil activo:</span>

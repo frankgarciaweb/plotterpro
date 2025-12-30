@@ -23,34 +23,34 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 relative" id="beneficios">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24 relative" id="beneficios">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-6 md:mb-8 lg:mb-12">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 lg:mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Digitaliza tu <span className="text-gradient">Negociación</span>
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Olvídate de esperar horas por una cotización manual. Nuestra plataforma 
             valida técnicamente cada archivo en tiempo real.
           </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl glass-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2"
+              className="group relative p-8 rounded-2xl glass-card hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
             >
               {/* Icon */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 md:mb-6 shadow-button group-hover:shadow-glow transition-all duration-300">
-                <benefit.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-button group-hover:shadow-glow transition-all duration-300">
+                <benefit.icon className="w-7 h-7 text-primary-foreground" />
               </div>
 
               {/* Content */}
-              <h3 className="font-display text-lg md:text-xl font-semibold mb-2 md:mb-3">{benefit.title}</h3>
-              <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4">{benefit.description}</p>
+              <h3 className="font-display text-xl font-semibold mb-3">{benefit.title}</h3>
+              <p className="text-muted-foreground mb-4">{benefit.description}</p>
 
               {/* Highlight Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
@@ -65,8 +65,8 @@ const BenefitsSection = () => {
         </div>
 
         {/* Problems Section */}
-        <div className="mt-6 md:mt-8 lg:mt-12 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl bg-card border border-border">
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 text-center">
+        <div className="mt-20 p-8 rounded-2xl bg-card border border-border">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-full bg-destructive/10 border border-destructive/20 flex items-center justify-center mx-auto">
                 <Clock className="w-6 h-6 text-destructive" />

@@ -27,26 +27,26 @@ const preflightChecks = [
 
 const PreflightSection = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 relative" id="preflight">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+    <section className="py-24 relative" id="preflight">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-success/10 border border-success/20 mb-4 md:mb-5 lg:mb-6">
-              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-success" />
-              <span className="text-xs md:text-sm font-medium text-success">Sistema de Validación</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 border border-success/20 mb-6">
+              <Check className="w-4 h-4 text-success" />
+              <span className="text-sm font-medium text-success">Sistema de Validación</span>
             </div>
 
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 lg:mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
               Preflight <span className="text-gradient">Dinámico</span>
             </h2>
 
-            <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-4 md:mb-6 lg:mb-8">
+            <p className="text-muted-foreground mb-8 text-lg">
               Nuestro sistema actúa como un <strong className="text-foreground">experto en preprensa digital</strong>. 
               Detectamos problemas técnicos antes de que imprimas, ahorrándote tiempo y dinero.
             </p>
 
-            <div className="space-y-3 md:space-y-4">
+            <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center shrink-0">
                   <Check className="w-5 h-5 text-success" />
@@ -78,7 +78,7 @@ const PreflightSection = () => {
           </div>
 
           {/* Visual Demo */}
-          <div className="p-3 md:p-4 lg:p-6 rounded-xl md:rounded-2xl glass-card">
+          <div className="p-6 rounded-2xl glass-card">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <FileText className="w-5 h-5 text-primary-foreground" />

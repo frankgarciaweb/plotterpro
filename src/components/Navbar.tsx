@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Printer } from "lucide-react";
 
 const navLinks = [
   { href: "#beneficios", label: "Beneficios" },
@@ -32,12 +32,10 @@ const Navbar = () => {
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
-          <img 
-            src="/img/plotter-pro-logo.png" 
-            alt="Plotter Pro Logo" 
-            className="h-8 md:h-10 w-auto object-contain max-w-[200px]"
-            loading="eager"
-          />
+          <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
+            <Printer className="w-5 h-5 text-primary-foreground" />
+          </div>
+          <span className="font-display text-xl font-bold">PrintPartner</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -65,9 +63,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-3 rounded-lg hover:bg-muted transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
             <X className="w-6 h-6" />
@@ -79,13 +76,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 right-0 bg-background border-b border-border p-4 md:p-6">
-          <div className="flex flex-col gap-2">
+        <div className="lg:hidden absolute top-20 left-0 right-0 bg-background border-b border-border p-4">
+          <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-3 px-2 min-h-[44px] flex items-center"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
